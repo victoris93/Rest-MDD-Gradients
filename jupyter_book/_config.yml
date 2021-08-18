@@ -1,0 +1,7 @@
+author: Victoria Shevchenko
+title: Biomarkers of Major Depressive Disorder. An Analysis of Macro-Scale Cortical Gradients
+bibtex_bibfiles:
+    - refs.bib
+sphinx:
+  config:
+    bibtex_reference_style: author_year

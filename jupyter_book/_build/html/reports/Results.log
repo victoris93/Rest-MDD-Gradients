@@ -1,0 +1,257 @@
+Traceback (most recent call last):
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 540, in async_execute
+    await self.async_execute_cell(
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/VictoriaShevchenko/opt/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from nibabel.testing import data_path
+from nilearn import datasets, plotting, regions
+import pandas as pd
+import numpy as np
+import os
+import nibabel as nib
+import matplotlib.pyplot as plt
+import scipy.io as sio
+from nilearn.image import index_img
+from scipy.stats import ttest_ind
+import mvlearn
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mOSError[0m                                   Traceback (most recent call last)
+[0;32m<ipython-input-1-456f7b7159f9>[0m in [0;36m<module>[0;34m[0m
+[1;32m      9[0m [0;32mfrom[0m [0mnilearn[0m[0;34m.[0m[0mimage[0m [0;32mimport[0m [0mindex_img[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     10[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m [0;32mimport[0m [0mttest_ind[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 11[0;31m [0;32mimport[0m [0mmvlearn[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     12[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0minteractiveshell[0m [0;32mimport[0m [0mInteractiveShell[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     13[0m [0mInteractiveShell[0m[0;34m.[0m[0mast_node_interactivity[0m [0;34m=[0m [0;34m"all"[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/mvlearn-0.4.1-py3.8.egg/mvlearn/__init__.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0membed[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0mcluster[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0msemi_supervised[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0mdatasets[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0mutils[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/mvlearn-0.4.1-py3.8.egg/mvlearn/embed/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     17[0m [0;34m[0m[0m
+[1;32m     18[0m [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 19[0;31m     [0;32mfrom[0m [0;34m.[0m[0momnibus[0m [0;32mimport[0m [0mOmnibus[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     20[0m [0;32mexcept[0m [0mModuleNotFoundError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     21[0m     [0;32mpass[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/mvlearn-0.4.1-py3.8.egg/mvlearn/embed/omnibus.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     18[0m [0;34m[0m[0m
+[1;32m     19[0m [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 20[0;31m     [0;32mfrom[0m [0mgraspy[0m[0;34m.[0m[0membed[0m [0;32mimport[0m [0mOmnibusEmbed[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     21[0m [0;32mexcept[0m [0mModuleNotFoundError[0m [0;32mas[0m [0merror[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     22[0m     msg = (f"Error: {error}. package graspy required for this function. " +
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/graspy-0.3.0-py3.8.egg/graspy/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m [0;32mimport[0m [0mgraspy[0m[0;34m.[0m[0mdatasets[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mgraspy[0m[0;34m.[0m[0membed[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m [0;32mimport[0m [0mgraspy[0m[0;34m.[0m[0minference[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m [0;32mimport[0m [0mgraspy[0m[0;34m.[0m[0mmodels[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m [0;32mimport[0m [0mgraspy[0m[0;34m.[0m[0mpipeline[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/graspy-0.3.0-py3.8.egg/graspy/inference/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mfrom[0m [0;34m.[0m[0mlatent_position_test[0m [0;32mimport[0m [0mLatentPositionTest[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0;32mfrom[0m [0;34m.[0m[0mlatent_distribution_test[0m [0;32mimport[0m [0mLatentDistributionTest[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0m__all__[0m [0;34m=[0m [0;34m[[0m[0;34m"LatentPositionTest"[0m[0;34m,[0m [0;34m"LatentDistributionTest"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/graspy-0.3.0-py3.8.egg/graspy/inference/latent_distribution_test.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     25[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmetrics[0m[0;34m.[0m[0mpairwise[0m [0;32mimport[0m [0mPAIRED_DISTANCES[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     26[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmetrics[0m[0;34m.[0m[0mpairwise[0m [0;32mimport[0m [0mPAIRWISE_KERNEL_FUNCTIONS[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 27[0;31m [0;32mfrom[0m [0mhyppo[0m[0;34m.[0m[0mksample[0m [0;32mimport[0m [0mKSample[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     28[0m [0;32mfrom[0m [0mhyppo[0m[0;34m.[0m[0m_utils[0m [0;32mimport[0m [0mgaussian[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     29[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/__init__.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mimport[0m [0mhyppo[0m[0;34m.[0m[0mdiscrim[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mimport[0m [0mhyppo[0m[0;34m.[0m[0mindependence[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mhyppo[0m[0;34m.[0m[0mksample[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mhyppo[0m[0;34m.[0m[0mtime_series[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mhyppo[0m[0;34m.[0m[0mtools[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/discrim/__init__.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mfrom[0m [0;34m.[0m[0mdiscrim_one_samp[0m [0;32mimport[0m [0mDiscrimOneSample[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mfrom[0m [0;34m.[0m[0mdiscrim_two_samp[0m [0;32mimport[0m [0mDiscrimTwoSample[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0m__all__[0m [0;34m=[0m [0;34m[[0m[0ms[0m [0;32mfor[0m [0ms[0m [0;32min[0m [0mdir[0m[0;34m([0m[0;34m)[0m[0;34m][0m  [0;31m# add imported tests to __all__[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/discrim/discrim_one_samp.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0m_lib[0m[0;34m.[0m[0m_util[0m [0;32mimport[0m [0mMapWrapper[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0;34m.[0m[0m_utils[0m [0;32mimport[0m [0m_CheckInputs[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;32mfrom[0m [0;34m.[0m[0mbase[0m [0;32mimport[0m [0mDiscriminabilityTest[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/discrim/_utils.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmetrics[0m [0;32mimport[0m [0mpairwise_distances[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mtools[0m [0;32mimport[0m [0mcheck_ndarray_xy[0m[0;34m,[0m [0mcheck_reps[0m[0;34m,[0m [0mcontains_nan[0m[0;34m,[0m [0mconvert_xy_float64[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;34m[0m[0m
+[1;32m      6[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/tools/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;32mfrom[0m [0;34m.[0m[0mindep_sim[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mfrom[0m [0;34m.[0m[0mksample_sim[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0;34m.[0m[0mpower[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;32mfrom[0m [0;34m.[0m[0mtime_series_sim[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/tools/power.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;34m[0m[0m
+[0;32m----> 5[0;31m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mindependence[0m [0;32mimport[0m [0mINDEP_TESTS[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mksample[0m [0;32mimport[0m [0mKSAMP_TESTS[0m[0;34m,[0m [0mKSample[0m[0;34m,[0m [0mk_sample_transform[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;32mfrom[0m [0;34m.[0m[0mindep_sim[0m [0;32mimport[0m [0mindep_sim[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/independence/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mfrom[0m [0;34m.[0m[0m_utils[0m [0;32mimport[0m [0msim_matrix[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;32mfrom[0m [0;34m.[0m[0mcca[0m [0;32mimport[0m [0mCCA[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0;32mfrom[0m [0;34m.[0m[0mdcorr[0m [0;32mimport[0m [0mDcorr[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;32mfrom[0m [0;34m.[0m[0mhhg[0m [0;32mimport[0m [0mHHG[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mfrom[0m [0;34m.[0m[0mhsic[0m [0;32mimport[0m [0mHsic[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_find_and_load_unlocked[0;34m(name, import_)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_unlocked[0;34m(spec)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/importlib/_bootstrap.py[0m in [0;36m_load_backward_compatible[0;34m(spec)[0m
+
+[0;32m<frozen zipimport>[0m in [0;36mload_module[0;34m(self, fullname)[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/hyppo-0.2.1-py3.8.egg/hyppo/independence/dcorr.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0;32mfrom[0m [0mnumba[0m [0;32mimport[0m [0mjit[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mtools[0m [0;32mimport[0m [0mcheck_perm_blocks_dim[0m[0;34m,[0m [0mchi2_approx[0m[0;34m,[0m [0mcompute_dist[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mfrom[0m [0;34m.[0m[0m_utils[0m [0;32mimport[0m [0m_CheckInputs[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/numba/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     12[0m [0;32mdel[0m [0mget_versions[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     13[0m [0;34m[0m[0m
+[0;32m---> 14[0;31m [0;32mfrom[0m [0mnumba[0m[0;34m.[0m[0mcore[0m [0;32mimport[0m [0mconfig[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     15[0m [0;32mfrom[0m [0mnumba[0m[0;34m.[0m[0mtesting[0m [0;32mimport[0m [0m_runtests[0m [0;32mas[0m [0mruntests[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m [0;32mfrom[0m [0mnumba[0m[0;34m.[0m[0mcore[0m [0;32mimport[0m [0mtypes[0m[0;34m,[0m [0merrors[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/numba/core/config.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     14[0m [0;34m[0m[0m
+[1;32m     15[0m [0;34m[0m[0m
+[0;32m---> 16[0;31m [0;32mimport[0m [0mllvmlite[0m[0;34m.[0m[0mbinding[0m [0;32mas[0m [0mll[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     17[0m [0;34m[0m[0m
+[1;32m     18[0m [0mIS_WIN32[0m [0;34m=[0m [0msys[0m[0;34m.[0m[0mplatform[0m[0;34m.[0m[0mstartswith[0m[0;34m([0m[0;34m'win32'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/llvmlite/binding/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0mThings[0m [0mthat[0m [0mrely[0m [0mon[0m [0mthe[0m [0mLLVM[0m [0mlibrary[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m """
+[0;32m----> 4[0;31m [0;32mfrom[0m [0;34m.[0m[0mdylib[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;32mfrom[0m [0;34m.[0m[0mexecutionengine[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;32mfrom[0m [0;34m.[0m[0minitfini[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/llvmlite/binding/dylib.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mfrom[0m [0mctypes[0m [0;32mimport[0m [0mc_void_p[0m[0;34m,[0m [0mc_char_p[0m[0;34m,[0m [0mc_bool[0m[0;34m,[0m [0mPOINTER[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;34m[0m[0m
+[0;32m----> 3[0;31m [0;32mfrom[0m [0mllvmlite[0m[0;34m.[0m[0mbinding[0m [0;32mimport[0m [0mffi[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;32mfrom[0m [0mllvmlite[0m[0;34m.[0m[0mbinding[0m[0;34m.[0m[0mcommon[0m [0;32mimport[0m [0m_encode_string[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/lib/python3.8/site-packages/llvmlite/binding/ffi.py[0m in [0;36m<module>[0;34m[0m
+[1;32m    151[0m         [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    152[0m [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 153[0;31m     [0;32mraise[0m [0mOSError[0m[0;34m([0m[0;34m"Could not load shared object file: {}"[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0m_lib_name[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    154[0m [0;34m[0m[0m
+[1;32m    155[0m [0;34m[0m[0m
+
+[0;31mOSError[0m: Could not load shared object file: libllvmlite.dylib
+OSError: Could not load shared object file: libllvmlite.dylib
+

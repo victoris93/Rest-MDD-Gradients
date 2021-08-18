@@ -1,0 +1,9 @@
+format: jb-book
+root: Abstract
+defaults: 
+  titlesonly: True
+chapters:
+- file: Introduction
+- file: Methodology
+- file: Results
+- file: Discussion

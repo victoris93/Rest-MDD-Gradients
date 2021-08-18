@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+nibabel
+nilearn
+scipy
+mvlearn
+seaborn
+jupyter-book

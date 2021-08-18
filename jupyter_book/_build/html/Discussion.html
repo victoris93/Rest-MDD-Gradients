@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discussion &#8212; Biomarkers of Major Depressive Disorder. An Analysis of Macro-Scale Cortical Gradients</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Results" href="Results.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Biomarkers of Major Depressive Disorder. An Analysis of Macro-Scale Cortical Gradients</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Abstract.html">
+   Abstract
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Methodology.html">
+   Methodology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Results.html">
+   Results
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Discussion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Discussion.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="discussion">
+<h1>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h1>
+<p>The aim of the present study was to compare macroscale cortical gradients of patients diagnosed with MDD and healthy controls. Along the first gradient, we hypothesized a shift of scores towards the transmodal end of the spectrum in drug-naïve patients. We expected a reverse trend in patients on medication, namely a shift of scores towards the unimodal end of the gradient resulting in more dispersed transmodal regions. We extracted two gradients from readily preprocessed fMRI timeseries provided by the REST-meta-MDD Consortium <span id="id1">[<a class="reference internal" href="#id13">Yan <em>et al.</em>, 2019</a>]</span>and compared them between healthy controls and depressed patients.</p>
+<p>We demonstrated that depressed drug-naïve subjects had a shift of gradient scores towards the transmodal end of the first gradient in the visual network:</p>
+<div class="figure align-default" id="res-1-ref">
+<img alt="_images/Results_37_2.png" src="_images/Results_37_2.png" />
+</div>
+<style>
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+}
+</style>
+<img class="marginauto" src="figures/yeo_result_1_grad_DN_NC.png" width = 450 alt="centered image" />
+<p>This result confirmed our prediction as to expanded transmodal areas: the scores of the regions overlapping with the visual network were shifted towards the transmodal end of the spectrum in drug-naïve patients.  Additionally, this score shift implies higher functional connectivity between the visual network and associative regions. This observation can putatively constitute a neural substrate of the most common symptom of depression – prolonged periods of self-focused rumination and the failure to objectively assess other people’s intentions – since hierarchical abnormalities within sensory regions can result in further distortions occurring in upstream regions all the way to higher-order associative areas. The involvement of the visual network in MDD is consistent with the results reported in <span id="id2">Yan <em>et al.</em> [<a class="reference internal" href="#id13">2019</a>]</span> thereby lending support to the gradient framework as a valid alternative to classical functional connectivity analyses. We therefore suggest further research into the role of the visual network in psychopathology and notably in MDD.</p>
+<p>The exploratory analysis revealed a shift in scores of two regions largely overlapping with the DMN towards the extremity occupied by the visual network:</p>
+<div class="figure align-default" id="res-2-ref">
+<img alt="_images/Results_39_2.png" src="_images/Results_39_2.png" />
+</div>
+<img class="marginauto" src="figures/yeo_result_2_grad_DN_NC.png" width = 700 alt="centered image" />
+<p>Bearing in mind that the DMN was attributed transitional values close to zero, one can conclude, that in drug-naïve patients, functional connectivity is higher between right angular gyrus and paracingulate cortex and the rest of the DMN along the second gradient. These observations are in line with the previous research on MDD reporting greater activity and connectivity within the DMN. The third region manifesting a significant difference in the gradient score – left middle temporal gyrus, temporooccipital part – was shifted in the opposite direction in drug-naïve depressed subjects, thus implying greater functional connectivity with the regions attributed negative values and overlapping with multiple resting state networks: the DMN, ventral attention and frontoparietal. The latter two networks occupy the opposite end of the second gradient relative to the visual network which might account for the finding. The fact that multiple networks coalesce within the left temporal middle cortex could account for the shift towards the ventral attention and frontoparietal networks rather than the DMN.</p>
+<p>With regards to subjects on medication, contrary to our prediction, no effect was found in the first gradient. Nevertheless, one cannot exclude the possibility of antidepressants exerting an effect on macroscale cortical hierarchy. That is to say, the absence of a significant effect is a consequence of insufficient sensibility either attributable to the methodology employed here or intrinsic to the dataset we had at our disposal. It is likely that the former is more relevant since, as mentioned above, the power of the sample was insufficient to detect a small effect (Cohen’s d ≤ 0.2).</p>
+<p>Nonetheless, a score shift was detected along the second gradient in the right frontal operculum cortex which is part of the ventral attention network:</p>
+<div class="figure align-default" id="res-3-ref">
+<img alt="_images/Results_43_2.png" src="_images/Results_43_2.png" />
+</div>
+<img class="marginauto" src="figures/yeo_result_2_grad_MED_NC.png" width = 250 alt="centered image" />
+<p>This observation points at a greater temporal decoupling of activity within the ventral attention network. Indeed, it was previously demonstrated that the administration of antidepressants reduces overall functional connectivity, including within the ventral attention network. <span id="id3">[<a class="reference internal" href="#id49">Li <em>et al.</em>, 2021</a>]</span> However, to establish associations between abnormal connectivity patterns in specific networks and the behavioral manifestation of MDD symptomatology, further research into resting state functional connectivity is needed.</p>
+<p>These results support the validity of the gradient-based approach for characterizing large-scale differences in functional organization associated with MDD. However, a number of limitations are worth mentioning. These can be divided into caveats intrinsic to the data and the caveats ensuing from the methodology. First, Harvard-Oxford parcellation is too coarse to be implicated in analyses of resting state functional connectivity, including gradient-based methods. Also, since Yeo’s atlas was not included in the preprocessed dataset, we had to adopt the strategy of visual assessment of spatial overlap between ROI and Yeo’s networks. Second, the dataset used here comprised only Chinese subjects which makes the extension of the results onto other ethnicities a complicated matter (e.g. <span id="id4">Tang <em>et al.</em> [<a class="reference internal" href="#id50">2018</a>]</span>). We suggest further investigations based on the gradient approach be conducted on non-Chinese datasets such as UK Biobank and ENIGMA MDD.</p>
+<p>As for GCCA, akin to any dimensionality reduction algorithm, it is based on the assumption that the components resulting from the transformation of the data are real entities and are treated as such by researchers. However, it is important to keep in mind that every component is only the product of the captured maximum variance in the dataset which constitutes a minor fraction of the original variance.  In other words, every dimensionality reduction algorithm, be it GCCA, diffusion embedding or some other, excludes most of the original variance from subsequent analyses. Furthermore, the peculiarity of PCA-like algorithms is what can put into question its ecological validity: the resulting components are orthogonal, i.e. uncorrelated. Methodological advancements leading to elimination of these limitations are called for. Also, the question still remains as to the appropriate number of components to be extracted in the case of fMRI data.  Moderate caution in the interpretation of outcomes of dimensionality reduction algorithms is paramount.</p>
+<p>The matter of effect size is also of great importance in the context of neuroimaging studies. The effect we detected in every case was small (Cohen’s d &lt; 0.3). When confronted with a statistically significant but small effect, one may consider the following questions: what is the meaning of a small, but significant difference between two large, independent samples? How informative is this difference? These questions constitute the core of the statistical debate within the field whereby the proponents of reporting effect sizes claim that statistical significance (i.e. p-value) alone does not suffice to deem the result meaningful. <span id="id5">[<a class="reference internal" href="#id51">Chen <em>et al.</em>, 2016</a>]</span> To tackle this issue, more meta-analyses and comparative methodological studies need to be conducted. In this study, we stood by the principle of reporting effect sizes for the sake of facilitation of subsequent meta-analyses and replications.</p>
+<p>Our findings pave the way for further investigations based on the gradient approach since it has the potential of offering a holistic overview of alterations in macroscale functional cortical hierarchy in psychopathology. Ultimately, we posit that macroscale cortical gradients may be used to obtain much coveted answers to most fundamental questions in cognitive neuroscience: how are our brains different? How can this difference be explained in terms of developmental mechanisms and, more specifically, neurogenesis? How can we globally characterize biomarkers of psychopathology? Can one elaborate potential scenarios of emergence of psychopathological conditions based on neuroimaging data? These questions could benefit from holistic frameworks such as macroscale cortical gradients.</p>
+<p id="id6"><dl class="citation">
+<dt class="label" id="id36"><span class="brackets">APHZSSZ12</span></dt>
+<dd><p>Babak Afshin-Pour, Gholam-Ali Hossein-Zadeh, Stephen C. Strother, and Hamid Soltanian-Zadeh. Enhancing reproducibility of fMRI statistical maps using generalized canonical correlation analysis in NPAIRS framework. <em>NeuroImage</em>, 60(4):1970–1981, May 2012. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S1053811912001644">https://linkinghub.elsevier.com/retrieve/pii/S1053811912001644</a> (visited on 2021-06-18), <a class="reference external" href="https://doi.org/10.1016/j.neuroimage.2012.01.137">doi:10.1016/j.neuroimage.2012.01.137</a>.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets">APA13</span></dt>
+<dd><p>APA. <em>Diagnostic and statistical manual of mental disorders: DSM-5</em>. American Psychiatric Association, Washington, D.C, 5th ed edition, 2013. ISBN 978-0-89042-554-1 978-0-89042-555-8.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets">BC07</span></dt>
+<dd><p>Randy L. Buckner and Daniel C. Carroll. Self-projection and the brain. <em>Trends in Cognitive Sciences</em>, 11(2):49–57, February 2007. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S1364661306003275">https://linkinghub.elsevier.com/retrieve/pii/S1364661306003275</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1016/j.tics.2006.11.004">doi:10.1016/j.tics.2006.11.004</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">CHEW+12</span></dt>
+<dd><p>R. L. Carhart-Harris, D. Erritzoe, T. Williams, J. M. Stone, L. J. Reed, A. Colasanti, R. J. Tyacke, R. Leech, A. L. Malizia, K. Murphy, P. Hobden, J. Evans, A. Feilding, R. G. Wise, and D. J. Nutt. Neural correlates of the psychedelic state as determined by fMRI studies with psilocybin. <em>Proceedings of the National Academy of Sciences</em>, 109(6):2138–2143, February 2012. URL: <a class="reference external" href="http://www.pnas.org/cgi/doi/10.1073/pnas.1119598109">http://www.pnas.org/cgi/doi/10.1073/pnas.1119598109</a> (visited on 2021-04-02), <a class="reference external" href="https://doi.org/10.1073/pnas.1119598109">doi:10.1073/pnas.1119598109</a>.</p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id5">CTC16</a></span></dt>
+<dd><p>Gang Chen, Paul A. Taylor, and Robert W. Cox. Commentary: is the statistic value all we should care about in neuroimaging? <em>bioRxiv</em>, 2016. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2016/07/15/064212">https://www.biorxiv.org/content/early/2016/07/15/064212</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2016/07/15/064212.full.pdf">arXiv:https://www.biorxiv.org/content/early/2016/07/15/064212.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/064212">doi:10.1101/064212</a>.</p>
+</dd>
+<dt class="label" id="id48"><span class="brackets">Coh88</span></dt>
+<dd><p>Jacob Cohen. <em>Statistical power analysis for the behavioral sciences</em>. L. Erlbaum Associates, Hillsdale, N.J, 2nd ed edition, 1988. ISBN 978-0-8058-0283-2.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets">CLL+05</span></dt>
+<dd><p>R. R. Coifman, S. Lafon, A. B. Lee, M. Maggioni, B. Nadler, F. Warner, and S. W. Zucker. Geometric diffusions as a tool for harmonic analysis and structure definition of data: Diffusion maps. <em>Proceedings of the National Academy of Sciences</em>, 102(21):7426–7431, May 2005. URL: <a class="reference external" href="http://www.pnas.org/cgi/doi/10.1073/pnas.0500334102">http://www.pnas.org/cgi/doi/10.1073/pnas.0500334102</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1073/pnas.0500334102">doi:10.1073/pnas.0500334102</a>.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">DYW+21</span></dt>
+<dd><p>Debo Dong, Dezhong Yao, Yulin Wang, Seok-Jun Hong, Sarah Genon, Fei Xin, Kyesam Jung, Hui He, Xuebin Chang, Mingjun Duan, Boris C. Bernhardt, Daniel S. Margulies, Jorge Sepulcre, Simon B. Eickhoff, and Cheng Luo. Compressed sensorimotor-to-transmodal hierarchical organization in schizophrenia. <em>Psychological Medicine</em>, pages 1–14, June 2021. URL: <a class="reference external" href="https://www.cambridge.org/core/product/identifier/S0033291721002129/type/journal_article">https://www.cambridge.org/core/product/identifier/S0033291721002129/type/journal_article</a> (visited on 2021-06-17), <a class="reference external" href="https://doi.org/10.1017/S0033291721002129">doi:10.1017/S0033291721002129</a>.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets">Fis35</span></dt>
+<dd><p>R.A. Fisher. <em>The Design of Experiments</em>. The Design of Experiments. Oliver and Boyd, 1935. URL: <a class="reference external" href="https://books.google.fi/books?id=-EsNAQAAIAAJ">https://books.google.fi/books?id=-EsNAQAAIAAJ</a>.</p>
+</dd>
+<dt class="label" id="id53"><span class="brackets">FL83</span></dt>
+<dd><p>David Freedman and David Lane. A Nonstochastic Interpretation of Reported Significance Levels. <em>Journal of Business &amp; Economic Statistics</em>, 1(4):292–298, 1983. Publisher: [American Statistical Association, Taylor &amp; Francis, Ltd.]. URL: <a class="reference external" href="http://www.jstor.org/stable/1391660">http://www.jstor.org/stable/1391660</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.2307/1391660">doi:10.2307/1391660</a>.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">GRB+20</span></dt>
+<dd><p>Manesh Girn, Leor Roseman, Boris Bernhardt, Jonathan Smallwood, Robin Carhart-Harris, and R. Nathan Spreng. Serotonergic psychedelic drugs LSD and psilocybin reduce the hierarchical differentiation of unimodal and transmodal cortex. preprint, Neuroscience, May 2020. URL: <a class="reference external" href="http://biorxiv.org/lookup/doi/10.1101/2020.05.01.072314">http://biorxiv.org/lookup/doi/10.1101/2020.05.01.072314</a> (visited on 2021-06-02), <a class="reference external" href="https://doi.org/10.1101/2020.05.01.072314">doi:10.1101/2020.05.01.072314</a>.</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets">GFM+07</span></dt>
+<dd><p>Michael D. Greicius, Benjamin H. Flores, Vinod Menon, Gary H. Glover, Hugh B. Solvason, Heather Kenna, Allan L. Reiss, and Alan F. Schatzberg. Resting-State Functional Connectivity in Major Depression: Abnormally Increased Contributions from Subgenual Cingulate Cortex and Thalamus. <em>Biological Psychiatry</em>, 62(5):429–437, September 2007. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0006322306011930">https://linkinghub.elsevier.com/retrieve/pii/S0006322306011930</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1016/j.biopsych.2006.09.020">doi:10.1016/j.biopsych.2006.09.020</a>.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets">HFC+11</span></dt>
+<dd><p>J. Paul Hamilton, Daniella J. Furman, Catie Chang, Moriah E. Thomason, Emily Dennis, and Ian H. Gotlib. Default-Mode and Task-Positive Network Activity in Major Depressive Disorder: Implications for Adaptive and Maladaptive Rumination. <em>Biological Psychiatry</em>, 70(4):327–333, August 2011. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0006322311001338">https://linkinghub.elsevier.com/retrieve/pii/S0006322311001338</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1016/j.biopsych.2011.02.003">doi:10.1016/j.biopsych.2011.02.003</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">HVdWB+19</span></dt>
+<dd><p>Seok-Jun Hong, Reinder Vos de Wael, Richard A. I. Bethlehem, Sara Lariviere, Casey Paquola, Sofie L. Valk, Michael P. Milham, Adriana Di Martino, Daniel S. Margulies, Jonathan Smallwood, and Boris C. Bernhardt. Atypical functional connectome hierarchy in autism. <em>Nature Communications</em>, 10(1):1022, December 2019. URL: <a class="reference external" href="http://www.nature.com/articles/s41467-019-08944-1">http://www.nature.com/articles/s41467-019-08944-1</a> (visited on 2021-06-03), <a class="reference external" href="https://doi.org/10.1038/s41467-019-08944-1">doi:10.1038/s41467-019-08944-1</a>.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets">HBM18</span></dt>
+<dd><p>Julia M. Huntenburg, Pierre-Louis Bazin, and Daniel S. Margulies. Large-Scale Gradients in Human Cortical Organization. <em>Trends in Cognitive Sciences</em>, 22(1):21–31, January 2018. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S1364661317302401">https://linkinghub.elsevier.com/retrieve/pii/S1364661317302401</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1016/j.tics.2017.11.002">doi:10.1016/j.tics.2017.11.002</a>.</p>
+</dd>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id3">LSW+21</a></span></dt>
+<dd><p>Le Li, Yun‐Ai Su, Yan‐Kun Wu, Francisco Xavier Castellanos, Ke Li, Ji‐Tao Li, Tian‐Mei Si, and Chao‐Gan Yan. \textless span style=&quot;font-variant:small-caps;&quot;\textgreater Eight‐week\textless /span\textgreater  antidepressant treatment reduces functional connectivity in \textless span style=&quot;font-variant:small-caps;&quot;\textgreater first‐episode drug‐naïve\textless /span\textgreater  patients with major depressive disorder. <em>Human Brain Mapping</em>, 42(8):2593–2605, June 2021. URL: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1002/hbm.25391">https://onlinelibrary.wiley.com/doi/10.1002/hbm.25391</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1002/hbm.25391">doi:10.1002/hbm.25391</a>.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">MGG+16</span></dt>
+<dd><p>Daniel S. Margulies, Satrajit S. Ghosh, Alexandros Goulas, Marcel Falkiewicz, Julia M. Huntenburg, Georg Langs, Gleb Bezgin, Simon B. Eickhoff, F. Xavier Castellanos, Michael Petrides, Elizabeth Jefferies, and Jonathan Smallwood. Situating the default-mode network along a principal gradient of macroscale cortical organization. <em>Proceedings of the National Academy of Sciences</em>, 113(44):12574–12579, November 2016. URL: <a class="reference external" href="http://www.pnas.org/lookup/doi/10.1073/pnas.1608282113">http://www.pnas.org/lookup/doi/10.1073/pnas.1608282113</a> (visited on 2021-04-19), <a class="reference external" href="https://doi.org/10.1073/pnas.1608282113">doi:10.1073/pnas.1608282113</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">May03</span></dt>
+<dd><p>Helen S Mayberg. Modulating dysfunctional limbic-cortical circuits in depression: towards development of brain-based algorithms for diagnosis and optimised treatment. <em>British Medical Bulletin</em>, 65(1):193–207, March 2003. URL: <a class="reference external" href="https://academic.oup.com/bmb/article/65/1/193/375334">https://academic.oup.com/bmb/article/65/1/193/375334</a> (visited on 2021-06-07), <a class="reference external" href="https://doi.org/10.1093/bmb/65.1.193">doi:10.1093/bmb/65.1.193</a>.</p>
+</dd>
+<dt class="label" id="id45"><span class="brackets">May09</span></dt>
+<dd><p>Helen S. Mayberg. Targeted electrode-based modulation of neural circuits for depression. <em>Journal of Clinical Investigation</em>, 119(4):717–725, April 2009. URL: <a class="reference external" href="http://www.jci.org/articles/view/38454">http://www.jci.org/articles/view/38454</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1172/JCI38454">doi:10.1172/JCI38454</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">MDS+18</span></dt>
+<dd><p>Felix Müller, Patrick C. Dolder, André Schmidt, Matthias E. Liechti, and Stefan Borgwardt. Altered network hub connectivity after acute LSD administration. <em>NeuroImage: Clinical</em>, 18:694–701, 2018. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S2213158218300755">https://linkinghub.elsevier.com/retrieve/pii/S2213158218300755</a> (visited on 2021-04-02), <a class="reference external" href="https://doi.org/10.1016/j.nicl.2018.03.005">doi:10.1016/j.nicl.2018.03.005</a>.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets">RMS+01</span></dt>
+<dd><p>M. E. Raichle, A. M. MacLeod, A. Z. Snyder, W. J. Powers, D. A. Gusnard, and G. L. Shulman. A default mode of brain function. <em>Proceedings of the National Academy of Sciences</em>, 98(2):676–682, January 2001. URL: <a class="reference external" href="http://www.pnas.org/cgi/doi/10.1073/pnas.98.2.676">http://www.pnas.org/cgi/doi/10.1073/pnas.98.2.676</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1073/pnas.98.2.676">doi:10.1073/pnas.98.2.676</a>.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets">SVP+20</span></dt>
+<dd><p>Andrea Scalabrini, Benedetta Vai, Sara Poletti, Stefano Damiani, Clara Mucci, Cristina Colombo, Raffaella Zanardi, Francesco Benedetti, and Georg Northoff. All roads lead to the default-mode network—global source of DMN abnormalities in major depressive disorder. <em>Neuropsychopharmacology</em>, 45(12):2058–2069, November 2020. URL: <a class="reference external" href="http://www.nature.com/articles/s41386-020-0785-x">http://www.nature.com/articles/s41386-020-0785-x</a> (visited on 2021-08-04), <a class="reference external" href="https://doi.org/10.1038/s41386-020-0785-x">doi:10.1038/s41386-020-0785-x</a>.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets">SG10</span></dt>
+<dd><p>R. Nathan Spreng and Cheryl L. Grady. Patterns of Brain Activity Supporting Autobiographical Memory, Prospection, and Theory of Mind, and Their Relationship to the Default Mode Network. <em>Journal of Cognitive Neuroscience</em>, 22(6):1112–1123, June 2010. URL: <a class="reference external" href="https://direct.mit.edu/jocn/article/22/6/1112-1123/4876">https://direct.mit.edu/jocn/article/22/6/1112-1123/4876</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1162/jocn.2009.21282">doi:10.1162/jocn.2009.21282</a>.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets">SKS21</span></dt>
+<dd><p>Mikael Sørensen, Charilaos I. Kanatsoulis, and Nicholas D. Sidiropoulos. Generalized Canonical Correlation Analysis: A Subspace Intersection Approach. <em>IEEE Transactions on Signal Processing</em>, 69:2452–2467, 2021. arXiv: 2003.11205. URL: <a class="reference external" href="http://arxiv.org/abs/2003.11205">http://arxiv.org/abs/2003.11205</a> (visited on 2021-06-19), <a class="reference external" href="https://doi.org/10.1109/TSP.2021.3061218">doi:10.1109/TSP.2021.3061218</a>.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets">TYKS+11</span></dt>
+<dd><p>B. T. T. Yeo, Fenna M. Krienen, Jorge Sepulcre, Mert R. Sabuncu, Danial Lashkari, Marisa Hollinshead, Joshua L. Roffman, Jordan W. Smoller, Lilla Zöllei, Jonathan R. Polimeni, Bruce Fischl, Hesheng Liu, and Randy L. Buckner. The organization of the human cerebral cortex estimated by intrinsic functional connectivity. <em>Journal of Neurophysiology</em>, 106(3):1125–1165, September 2011. URL: <a class="reference external" href="https://www.physiology.org/doi/10.1152/jn.00338.2011">https://www.physiology.org/doi/10.1152/jn.00338.2011</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1152/jn.00338.2011">doi:10.1152/jn.00338.2011</a>.</p>
+</dd>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id4">TZL+18</a></span></dt>
+<dd><p>Yuchun Tang, Lu Zhao, Yunxia Lou, Yonggang Shi, Rui Fang, Xiangtao Lin, Shuwei Liu, and Arthur Toga. Brain structure differences between Chinese and Caucasian cohorts: A comprehensive morphometry study. <em>Human Brain Mapping</em>, 39(5):2147–2155, May 2018. URL: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1002/hbm.23994">https://onlinelibrary.wiley.com/doi/10.1002/hbm.23994</a> (visited on 2021-08-17), <a class="reference external" href="https://doi.org/10.1002/hbm.23994">doi:10.1002/hbm.23994</a>.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets">WRW+14</span></dt>
+<dd><p>Anderson M. Winkler, Gerard R. Ridgway, Matthew A. Webster, Stephen M. Smith, and Thomas E. Nichols. Permutation inference for the general linear model. <em>NeuroImage</em>, 92:381–397, May 2014. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S1053811914000913">https://linkinghub.elsevier.com/retrieve/pii/S1053811914000913</a> (visited on 2021-07-24), <a class="reference external" href="https://doi.org/10.1016/j.neuroimage.2014.01.060">doi:10.1016/j.neuroimage.2014.01.060</a>.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets">WAB+11</span></dt>
+<dd><p>Minjie Wu, Carmen Andreescu, Meryl A. Butters, Robert Tamburo, Charles F. Reynolds, and Howard Aizenstein. Default-mode network connectivity and white matter burden in late-life depression. <em>Psychiatry Research: Neuroimaging</em>, 194(1):39–46, October 2011. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0925492711001235">https://linkinghub.elsevier.com/retrieve/pii/S0925492711001235</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1016/j.pscychresns.2011.04.003">doi:10.1016/j.pscychresns.2011.04.003</a>.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">YCL+19</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Chao-Gan Yan, Xiao Chen, Le Li, Francisco Xavier Castellanos, Tong-Jian Bai, Qi-Jing Bo, Jun Cao, Guan-Mao Chen, Ning-Xuan Chen, Wei Chen, Chang Cheng, Yu-Qi Cheng, Xi-Long Cui, Jia Duan, Yi-Ru Fang, Qi-Yong Gong, Wen-Bin Guo, Zheng-Hua Hou, Lan Hu, Li Kuang, Feng Li, Kai-Ming Li, Tao Li, Yan-Song Liu, Zhe-Ning Liu, Yi-Cheng Long, Qing-Hua Luo, Hua-Qing Meng, Dai-Hui Peng, Hai-Tang Qiu, Jiang Qiu, Yue-Di Shen, Yu-Shu Shi, Chuan-Yue Wang, Fei Wang, Kai Wang, Li Wang, Xiang Wang, Ying Wang, Xiao-Ping Wu, Xin-Ran Wu, Chun-Ming Xie, Guang-Rong Xie, Hai-Yan Xie, Peng Xie, Xiu-Feng Xu, Hong Yang, Jian Yang, Jia-Shu Yao, Shu-Qiao Yao, Ying-Ying Yin, Yong-Gui Yuan, Ai-Xia Zhang, Hong Zhang, Ke-Rang Zhang, Lei Zhang, Zhi-Jun Zhang, Ru-Bai Zhou, Yi-Ting Zhou, Jun-Juan Zhu, Chao-Jie Zou, Tian-Mei Si, Xi-Nian Zuo, Jing-Ping Zhao, and Yu-Feng Zang. Reduced default mode network functional connectivity in patients with recurrent major depressive disorder. <em>Proceedings of the National Academy of Sciences</em>, 116(18):9078–9083, April 2019. URL: <a class="reference external" href="http://www.pnas.org/lookup/doi/10.1073/pnas.1900390116">http://www.pnas.org/lookup/doi/10.1073/pnas.1900390116</a> (visited on 2021-06-02), <a class="reference external" href="https://doi.org/10.1073/pnas.1900390116">doi:10.1073/pnas.1900390116</a>.</p>
+</dd>
+<dt class="label" id="id33"><span class="brackets">ZYZ+10</span></dt>
+<dd><p>Yuan Zhou, Chunshui Yu, Hua Zheng, Yong Liu, Ming Song, Wen Qin, Kuncheng Li, and Tianzi Jiang. Increased neural resources recruitment in the intrinsic organization in major depression. <em>Journal of Affective Disorders</em>, 121(3):220–230, March 2010. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0165032709002365">https://linkinghub.elsevier.com/retrieve/pii/S0165032709002365</a> (visited on 2021-06-14), <a class="reference external" href="https://doi.org/10.1016/j.jad.2009.05.029">doi:10.1016/j.jad.2009.05.029</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Results.html" title="previous page">Results</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Victoria Shevchenko<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
