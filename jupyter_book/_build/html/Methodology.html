@@ -229,11 +229,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#convert-t-statistics-to-cohen-s-d">
-   Convert T-statistics to Cohen’s d
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -495,6 +490,14 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -959,24 +962,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Site&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7fca1f1d90&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Site&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_16_4.png" src="_images/Methodology_16_4.png" />
+<img alt="_images/Methodology_17_0.png" src="_images/Methodology_17_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1002,30 +993,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8013dacf40&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f8015cd3d60&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f44552fa0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f44552fd0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Site&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_17_6.png" src="_images/Methodology_17_6.png" />
+<img alt="_images/Methodology_18_0.png" src="_images/Methodology_18_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1061,33 +1034,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Site&#39;, ylabel=&#39;Age&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f801a413eb0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f444d9df0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f444e5f10&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7f444f3eb0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Site&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Age&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_18_7.png" src="_images/Methodology_18_7.png" />
+<img alt="_images/Methodology_19_0.png" src="_images/Methodology_19_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1121,33 +1073,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Education (years)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Education (years)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Site&#39;, ylabel=&#39;Education (years)&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8013dac8e0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f444f3fd0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f4455ad00&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f7f2e725ac0&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Site&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Education (years)&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_19_7.png" src="_images/Methodology_19_7.png" />
+<img alt="_images/Methodology_20_0.png" src="_images/Methodology_20_0.png" />
 </div>
 </div>
 </div>
@@ -1259,21 +1190,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gradient Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;value&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Gradient Score&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_33_3.png" src="_images/Methodology_33_3.png" />
+<img alt="_images/Methodology_34_0.png" src="_images/Methodology_34_0.png" />
 </div>
 </div>
 <p>Distribution of scores: second gradient (DN vs NC).</p>
@@ -1288,21 +1210,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gradient Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;value&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Gradient Score&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_35_3.png" src="_images/Methodology_35_3.png" />
+<img alt="_images/Methodology_36_0.png" src="_images/Methodology_36_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1342,21 +1255,12 @@ Name: Sex, dtype: int64
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gradient Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;value&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Gradient Score&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_38_3.png" src="_images/Methodology_38_3.png" />
+<img alt="_images/Methodology_39_0.png" src="_images/Methodology_39_0.png" />
 </div>
 </div>
 <p>Distribution of scores: second gradient (MED vs NC).</p>
@@ -1366,26 +1270,17 @@ Name: Sex, dtype: int64
 <span class="n">fig_dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">fig_dims</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">distribution_MED_NC_2</span><span class="p">,</span>
-             <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;Group&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tab:green&quot;</span><span class="p">,</span><span class="s2">&quot;tab:orange&quot;</span><span class="p">],</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+             <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;Group&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tab:green&quot;</span><span class="p">,</span><span class="s2">&quot;tab:orange&quot;</span><span class="p">])</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gradient Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;value&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Gradient Score&#39;)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
-</pre></div>
-</div>
-<img alt="_images/Methodology_40_3.png" src="_images/Methodology_40_3.png" />
+<img alt="_images/Methodology_41_0.png" src="_images/Methodology_41_0.png" />
 </div>
 </div>
 </div>
@@ -1454,8 +1349,8 @@ Name: Sex, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Methodology_45_0.png" src="_images/Methodology_45_0.png" />
-<img alt="_images/Methodology_45_1.png" src="_images/Methodology_45_1.png" />
+<img alt="_images/Methodology_46_0.png" src="_images/Methodology_46_0.png" />
+<img alt="_images/Methodology_46_1.png" src="_images/Methodology_46_1.png" />
 </div>
 </div>
 <p>NC: first &amp; second gradients plotted onto fsaverage surface</p>
@@ -1469,8 +1364,8 @@ Name: Sex, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Methodology_47_0.png" src="_images/Methodology_47_0.png" />
-<img alt="_images/Methodology_47_1.png" src="_images/Methodology_47_1.png" />
+<img alt="_images/Methodology_48_0.png" src="_images/Methodology_48_0.png" />
+<img alt="_images/Methodology_48_1.png" src="_images/Methodology_48_1.png" />
 </div>
 </div>
 <p>MED: first &amp; second gradients plotted onto fsaverage surface</p>
@@ -1484,19 +1379,19 @@ Name: Sex, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Methodology_49_0.png" src="_images/Methodology_49_0.png" />
-<img alt="_images/Methodology_49_1.png" src="_images/Methodology_49_1.png" />
+<img alt="_images/Methodology_50_0.png" src="_images/Methodology_50_0.png" />
+<img alt="_images/Methodology_50_1.png" src="_images/Methodology_50_1.png" />
 </div>
 </div>
 <p>Figures above illustrate gradients resulting from the GCCA averaged across subjects. The gradients are different from those described in <span id="id11">Margulies <em>et al.</em> [<a class="reference internal" href="Discussion.html#id11">2016</a>]</span> in that the regions constituting the visual network were attributed transitional scores (around 0) between uni- and transmodal regions along the first gradient. The very same regions scored the highest on the second gradient: the visual network was placed at the positive end of the spectrum whereas the associative areas such as angular and frontal middle gyri were attributed the lowest scores.</p>
 </div>
 <div class="section" id="inferential-statistics-permutation-of-the-ols-model">
 <h3>Inferential Statistics: Permutation of the OLS Model<a class="headerlink" href="#inferential-statistics-permutation-of-the-ols-model" title="Permalink to this headline">¶</a></h3>
-<p>In order to assess the significance of the relationship between the affiliation to a group (DN, MED or NC) and the gradient score of each region, we performed a massively univariate group analysis with permuted ordinary least squares (OLS) linear model. Initially proposed by <span id="id12">[<a class="reference internal" href="Discussion.html#id52">Fisher, 1935</a>]</span>, the permutation inference has proven to be flexible in terms of statistical assumptions such as the normality of data distribution and also rigorous in controlling for false positives. <span id="id13">[<a class="reference internal" href="Discussion.html#id41">Winkler <em>et al.</em>, 2014</a>]</span> The permutation strategy used here is the one established by <span id="id14">Freedman and Lane [<a class="reference internal" href="Discussion.html#id53">1983</a>]</span> (for a detailed description see <span id="id15">Winkler <em>et al.</em> [<a class="reference internal" href="Discussion.html#id41">2014</a>]</span>): the model regressors are estimated for the normal (𝛽0) and permuted (𝛽*) models which are used to compute and compare independent t-values, t0 and t* respectively. The resulting p-value depends on i. the number of permutations and ii. the number of times t0 appears to be equal to or greater than t* at each permutation:
-<img src="figures/formula_1.png" width="150">
-where n_perm is the number of permutations: in our case, 10000. The following model was fitted onto the first and second gradient scores of all 96 regions as delineated in the Harvard-Oxford atlas:
-<img src="figures/formula_2.png" width="450">
-where the variables within the square brackets are the nuisance variables which were corrected for.</p>
+<p>In order to assess the significance of the relationship between the affiliation to a group (DN, MED or NC) and the gradient score of each region, we performed a massively univariate group analysis with permuted ordinary least squares (OLS) linear model. Initially proposed by <span id="id12">[<a class="reference internal" href="Discussion.html#id52">Fisher, 1935</a>]</span>, the permutation inference has proven to be flexible in terms of statistical assumptions such as the normality of data distribution and also rigorous in controlling for false positives. <span id="id13">[<a class="reference internal" href="Discussion.html#id41">Winkler <em>et al.</em>, 2014</a>]</span> The permutation strategy used here is the one established by <span id="id14">Freedman and Lane [<a class="reference internal" href="Discussion.html#id53">1983</a>]</span> (for a detailed description see <span id="id15">Winkler <em>et al.</em> [<a class="reference internal" href="Discussion.html#id41">2014</a>]</span>): the model regressors are estimated for the normal (𝛽0) and permuted (𝛽*) models which are used to compute and compare independent t-values, t0 and t* respectively. The resulting p-value depends on i. the number of permutations and ii. the number of times t0 appears to be equal to or greater than t* at each permutation:</p>
+<img class="marginauto" src="figures/formula_1.png" width="150" alt="centered image" />
+<p>where n_perm is the number of permutations: in our case, 10000. The following model was fitted onto the first and second gradient scores of all 96 regions as delineated in the Harvard-Oxford atlas:</p>
+<img class="marginauto" src="figures/formula_2.png" width="450" alt="centered image" />
+<p>where the variables within the square brackets are the nuisance variables which were corrected for.</p>
 <ol class="simple">
 <li><p>Preparing data frames:</p></li>
 </ol>
@@ -1677,11 +1572,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="convert-t-statistics-to-cohen-s-d">
-<h2>Convert T-statistics to Cohen’s d<a class="headerlink" href="#convert-t-statistics-to-cohen-s-d" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<ol class="simple">
+<li><p>Convert T-statistics to Cohen’s d</p></li>
+</ol>
+<p>The results are reported only for the regions which survived the family-wise error rate (FWE) correction for multiple comparisons. We applied the following formula to compute effect size:</p>
+<img class="marginauto" src="figures/formula_3.png" width="200" alt="centered image" /><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Function: t-statistic to Cohen&#39;s d</span>
 <span class="k">def</span> <span class="nf">t_to_cohens_d</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
@@ -1749,8 +1644,6 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<p>The results are reported only for the regions which survived the family-wise error rate (FWE) correction for multiple comparisons. We applied the following formula to compute effect size:
-<img src="figures/formula_3.png" width="1"></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Check all Cohen&#39;s d values and HO labels</span>
@@ -1762,6 +1655,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
         <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="s2">&quot;, Cohen&#39;s d = &quot;</span><span class="p">,</span> <span class="n">cohen_d</span><span class="p">)</span>
         
 </pre></div>
+</div>
 </div>
 </div>
 </div>

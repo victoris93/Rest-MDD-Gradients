@@ -222,16 +222,13 @@
 <h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_hide-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nibabel.testing</span> <span class="kn">import</span> <span class="n">data_path</span>
-<span class="kn">from</span> <span class="nn">nilearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">plotting</span><span class="p">,</span> <span class="n">regions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nilearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">plotting</span><span class="p">,</span> <span class="n">regions</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">sio</span>
 <span class="kn">from</span> <span class="nn">nilearn.image</span> <span class="kn">import</span> <span class="n">index_img</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">ttest_ind</span>
 <span class="kn">import</span> <span class="nn">mvlearn</span>
 <span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="kn">import</span> <span class="n">InteractiveShell</span>
 <span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
@@ -245,12 +242,12 @@
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">456</span><span class="n">f7b7159f9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">nilearn.image</span> <span class="kn">import</span> <span class="n">index_img</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">ttest_ind</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">mvlearn</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="kn">import</span> <span class="n">InteractiveShell</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1699</span><span class="n">a8e73620</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">sio</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">nilearn.image</span> <span class="kn">import</span> <span class="n">index_img</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">mvlearn</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="kn">import</span> <span class="n">InteractiveShell</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
 
 <span class="o">~/</span><span class="n">opt</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mvlearn</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">.</span><span class="mf">8.</span><span class="n">egg</span><span class="o">/</span><span class="n">mvlearn</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">mvlearn.embed</span>
@@ -1002,10 +999,10 @@ Right Supracalcarine Cortex , Cohen&#39;s d =  -0.2330562935835035
 </pre></div>
 </div>
 <img alt="_images/Results_37_1.png" src="_images/Results_37_1.png" />
-<img alt="_images/Results_37_2.png" src="_images/Results_37_2.png" />
+<img alt="_images/Results_37_21.png" src="_images/Results_37_21.png" />
 </div>
 </div>
-<p>The analyses revealed a significant group difference between mean scores of the first, uni-to-transmodal gradient in the regions overlapping with the visual network (see above: the colors of the region labels on the y-axis correspond to the regions delineated in the Harvard-Oxford atlas). A closer comparison of the mean scores of the left intracalcarine cortex, left cuneal cortex, left lingual gyrus and right supracalcarine cortex revealed that while the values were in both groups distributed around zero, in the drug-naïve group, being on the negative side of the spectrum, they were closer to transmodal regions. The same is true for the left supracalcarine cortex with a score farther from zero in the transmodal direction than that of its equivalent in controls. These findings are in line with the results reported in <span id="id1">Yan <em>et al.</em> [<a class="reference internal" href="Discussion.html#id8">2019</a>]</span> , namely lower functional connectivity within the visual network in first-episode drug-naïve patients compared to controls.</p>
+<p>The analyses revealed a significant group difference between mean scores of the first, uni-to-transmodal gradient in the regions overlapping with the visual network (see above: the colors of the region labels on the y-axis correspond to the regions delineated in the Harvard-Oxford atlas). A closer comparison of the mean scores of the left intracalcarine cortex, left cuneal cortex, left lingual gyrus and right supracalcarine cortex revealed that while the values were in both groups distributed around zero, in the drug-naïve group, being on the negative side of the spectrum, they were closer to transmodal regions. The same is true for the left supracalcarine cortex with a score farther from zero in the transmodal direction than that of its equivalent in controls. These findings are in line with the results reported in <span id="id1">Yan <em>et al.</em> [<a class="reference internal" href="Discussion.html#id13">2019</a>]</span> , namely lower functional connectivity within the visual network in first-episode drug-naïve patients compared to controls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">2nd Gradient, Drug-Naïve MDDs vs. Controls:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -1063,7 +1060,7 @@ Right Paracingulate Gyrus , Cohen&#39;s d =  0.2496368046258911
 </pre></div>
 </div>
 <img alt="_images/Results_39_1.png" src="_images/Results_39_1.png" />
-<img alt="_images/Results_39_2.png" src="_images/Results_39_2.png" />
+<img alt="_images/Results_39_21.png" src="_images/Results_39_21.png" />
 </div>
 </div>
 <p>In the second gradient, the regions having the greatest spatial overlap with the DMN (above: the right angular gyrus and right paracingulate gyrus) were closer to zero in the drug-naïve group and, consequently, to the DMN which, as pointed out above, was attributed transitional values near zero. Conversely, in controls, these same regions were closer to the ventral attention network in terms of scores. The sign of the effect was reversed for the left middle temporal gyrus, temporooccipital part, which covers the junction of the DMN, frontoparietal and ventral attention networks: the region was situated farther away from zero along the second gradient in the drug-naïve group. This shift towards the negative end of the spectrum makes this region functionally closer to the networks obtaining similar scores in controls: the ventral attention and frontoparietal.</p>
@@ -1138,7 +1135,7 @@ Right Frontal Operculum Cortex , Cohen&#39;s d =  0.23198477816467322
 </pre></div>
 </div>
 <img alt="_images/Results_43_1.png" src="_images/Results_43_1.png" />
-<img alt="_images/Results_43_2.png" src="_images/Results_43_2.png" />
+<img alt="_images/Results_43_21.png" src="_images/Results_43_21.png" />
 </div>
 </div>
 <p>The comparison of the first gradient scores between controls and MDD patients on medication revealed a significant difference. However, the right frontal operculum, which is situated in the ventral attention network, had a significantly higher second gradient score in patients on medication (Cohen’s d = 0.231). More specifically, it was closer to zero and farther from the negative end of the spectrum (above) occupied by the frontoparietal and ventral attention networks. This finding putatively suggests lower functional connectivity within the ventral attention network in subjects on antidepressants due to a longer distance between the region in question and the rest of the network along the second gradient.</p>

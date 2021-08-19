@@ -6,16 +6,13 @@
 # In[1]:
 
 
-from nibabel.testing import data_path
 from nilearn import datasets, plotting, regions
 import pandas as pd
 import numpy as np
 import os
-import nibabel as nib
 import matplotlib.pyplot as plt
 import scipy.io as sio
 from nilearn.image import index_img
-from scipy.stats import ttest_ind
 import mvlearn
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"

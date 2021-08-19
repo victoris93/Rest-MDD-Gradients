@@ -17,16 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from nibabel.testing import data_path
 from nilearn import datasets, plotting, regions
 import pandas as pd
 import numpy as np
 import os
-import nibabel as nib
 import matplotlib.pyplot as plt
 import scipy.io as sio
 from nilearn.image import index_img
-from scipy.stats import ttest_ind
 import mvlearn
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -34,12 +31,12 @@ InteractiveShell.ast_node_interactivity = "all"
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mOSError[0m                                   Traceback (most recent call last)
-[0;32m<ipython-input-1-456f7b7159f9>[0m in [0;36m<module>[0;34m[0m
-[1;32m      9[0m [0;32mfrom[0m [0mnilearn[0m[0;34m.[0m[0mimage[0m [0;32mimport[0m [0mindex_img[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     10[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m [0;32mimport[0m [0mttest_ind[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 11[0;31m [0;32mimport[0m [0mmvlearn[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     12[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0minteractiveshell[0m [0;32mimport[0m [0mInteractiveShell[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     13[0m [0mInteractiveShell[0m[0;34m.[0m[0mast_node_interactivity[0m [0;34m=[0m [0;34m"all"[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-1-1699a8e73620>[0m in [0;36m<module>[0;34m[0m
+[1;32m      6[0m [0;32mimport[0m [0mscipy[0m[0;34m.[0m[0mio[0m [0;32mas[0m [0msio[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;32mfrom[0m [0mnilearn[0m[0;34m.[0m[0mimage[0m [0;32mimport[0m [0mindex_img[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 8[0;31m [0;32mimport[0m [0mmvlearn[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      9[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0minteractiveshell[0m [0;32mimport[0m [0mInteractiveShell[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     10[0m [0mInteractiveShell[0m[0;34m.[0m[0mast_node_interactivity[0m [0;34m=[0m [0;34m"all"[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m~/opt/anaconda3/lib/python3.8/site-packages/mvlearn-0.4.1-py3.8.egg/mvlearn/__init__.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;32mimport[0m [0mmvlearn[0m[0;34m.[0m[0membed[0m[0;34m[0m[0;34m[0m[0m

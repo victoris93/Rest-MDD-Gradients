@@ -24,11 +24,18 @@ InteractiveShell.ast_node_interactivity = "all"
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
+# In[3]:
+
+
+import warnings
+warnings.filterwarnings('ignore')
+
+
 # ## Participants
 
 # The dataset provided by the REST-meta-MDD Consortium {cite:p}`yan_reduced_2019` contained preprocessed region-wise resting state fMRI time-series of 1,300 patients diagnosed with MDD and 1,128 healthy controls.
 
-# In[5]:
+# In[7]:
 
 
 current_dir = os.getcwd()
@@ -38,7 +45,7 @@ phenotype_path = os.path.join(current_dir,"", "REST-meta-MDD-PhenotypicData_With
 
 # Among the depressed group, 447 patients were drug-naïve. The exclusion of one patient from the analyses due to missing signals resulted in 446 drug-naïve individuals in total (278 females, mean age = 32.7 years, SD = 12 years).
 
-# In[8]:
+# In[10]:
 
 
 #Importing drug naïve subjects with MDD
@@ -64,7 +71,7 @@ df_subj_DN_MDD["Sex"].value_counts()
 
 #  We sampled the same number of controls (252 females, mean age = 36.3 years, SD = 11.8 years).
 
-# In[57]:
+# In[11]:
 
 
 #Importing controls
@@ -163,7 +170,7 @@ plt.legend(new_labels, loc = 'upper left', fontsize = 'x-large')
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Site', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
 # In[16]:
@@ -190,7 +197,7 @@ ax.axhline(females_NC, c = 'tab:orange', linestyle = '-.')
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Site', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
 # In[17]:
@@ -227,7 +234,7 @@ ax.legend(handles, new_labels, fontsize = 'x-large')
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Site', fontsize = 15)
-plt.ylabel('Age', fontsize = 15)
+plt.ylabel('Age', fontsize = 15);
 
 
 # In[18]:
@@ -262,7 +269,7 @@ ax.axhline(y = education_mean_NC, c = 'tab:orange', linestyle = '-.')
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Site', fontsize = 15)
-plt.ylabel('Education (years)', fontsize = 15)
+plt.ylabel('Education (years)', fontsize = 15);
 
 
 # ## Cortical Parcellation
@@ -315,14 +322,14 @@ labels = nilearn_HO_atlas['labels'][1:97]
 # GCCA is an extension of canonical correlation analysis (CCA) which solves the problem of identifying basis vectors of two datasets such that the products **[dataset (1) * basis vector (1)]** and **[dataset (2) * basis vector (2)]** are maximally correlated. On a conceptual level, CCA can be viewed as PCA with the exception that it extracts only those components, which explain the variance common to both datasets {cite:p}`sorensen_generalized_2021`. Essentially, GCCA is the version of CCA applicable to more than two datasets.
 # 
 
-# In[19]:
+# In[21]:
 
 
 #All data
 ALL_DATA = data_DN_MDD + data_MED_MDD + data_NC
 
 
-# In[20]:
+# In[22]:
 
 
 #Fitting on the data of all subjects
@@ -336,7 +343,7 @@ gcca.fit(ALL_DATA)
 projs = gcca.transform(ALL_DATA)
 
 
-# In[21]:
+# In[23]:
 
 
 # Dividing GCCA-transformed data into groups
@@ -348,7 +355,7 @@ projs_NC_small = projs[828:1210]
 
 # Macroscale cortical gradients resulting from GCCA.
 
-# In[25]:
+# In[24]:
 
 
 # Gradient Data Frame
@@ -369,7 +376,7 @@ grad_distributions_DN_NC_wide = grad_distributions_DN_NC.melt(var_name = 'Group'
 
 # Distribution of scores: first gradient (DN vs NC).
 
-# In[27]:
+# In[25]:
 
 
 distribution_DN_NC_1 = grad_distributions_DN_NC_wide.loc[(grad_distributions_DN_NC_wide['Group'] == 'Drug-Naïve MDDs, 1st Gradient') | (grad_distributions_DN_NC_wide['Group'] == 'Controls, 1st Gradient')]
@@ -381,12 +388,12 @@ sns.histplot(data = distribution_DN_NC_1,
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Gradient Score', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
 # Distribution of scores: second gradient (DN vs NC).
 
-# In[28]:
+# In[26]:
 
 
 distribution_DN_NC_2 = grad_distributions_DN_NC_wide.loc[(grad_distributions_DN_NC_wide['Group'] == 'Drug-Naïve MDDs, 2nd Gradient') | (grad_distributions_DN_NC_wide['Group'] == 'Controls, 2nd Gradient')]
@@ -398,10 +405,10 @@ sns.histplot(data = distribution_DN_NC_2,
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Gradient Score', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
-# In[29]:
+# In[27]:
 
 
 # Gradient Data Frame
@@ -428,7 +435,7 @@ grad_distributions_MED_NC_wide = pd.concat([grad_distributions_MED_wide, grad_di
 
 # Distribution of scores: first gradient (MED vs NC).
 
-# In[30]:
+# In[28]:
 
 
 distribution_MED_NC_1 = grad_distributions_MED_NC_wide.loc[(grad_distributions_MED_NC_wide['Group'] == 'MDDs on Medication, 1st Gradient') | (grad_distributions_MED_NC_wide['Group'] == 'Controls, 1st Gradient')]
@@ -439,24 +446,24 @@ sns.histplot(data = distribution_MED_NC_1,
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Gradient Score', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
 # Distribution of scores: second gradient (MED vs NC).
 
-# In[31]:
+# In[29]:
 
 
 distribution_MED_NC_2 = grad_distributions_MED_NC_wide.loc[(grad_distributions_MED_NC_wide['Group'] == 'MDDs on Medication, 2nd Gradient') | (grad_distributions_MED_NC_wide['Group'] == 'Controls, 2nd Gradient')]
 fig_dims = (10, 7)
 fig, ax = plt.subplots(figsize=fig_dims)
 sns.histplot(data = distribution_MED_NC_2,
-             x = 'value', ax=ax, hue = "Group", palette=["tab:green","tab:orange"], legend = False)
+             x = 'value', ax=ax, hue = "Group", palette=["tab:green","tab:orange"])
 
 ax.tick_params(axis='x', labelsize= 14) 
 ax.tick_params(axis='y', labelsize= 14) 
 plt.xlabel('Gradient Score', fontsize = 15)
-plt.ylabel('Density', fontsize = 15)
+plt.ylabel('Density', fontsize = 15);
 
 
 # ### Visualization with fsaverage
@@ -549,9 +556,13 @@ plot_stat_surf(av_gradient_2_MED_MDD_vis, 'pial', 'turbo', colorbar_4= True, dar
 # ### Inferential Statistics: Permutation of the OLS Model
 
 # In order to assess the significance of the relationship between the affiliation to a group (DN, MED or NC) and the gradient score of each region, we performed a massively univariate group analysis with permuted ordinary least squares (OLS) linear model. Initially proposed by {cite:p}`fisher_design_1935`, the permutation inference has proven to be flexible in terms of statistical assumptions such as the normality of data distribution and also rigorous in controlling for false positives. {cite:p}`winkler_permutation_2014` The permutation strategy used here is the one established by {cite:t}`freedman_nonstochastic_1983` (for a detailed description see {cite:t}`winkler_permutation_2014`): the model regressors are estimated for the normal (𝛽0) and permuted (𝛽\*) models which are used to compute and compare independent t-values, t0 and t\* respectively. The resulting p-value depends on i. the number of permutations and ii. the number of times t0 appears to be equal to or greater than t\* at each permutation:
-# <img src="figures/formula_1.png" width="150">
+# 
+# <img class="marginauto" src="figures/formula_1.png" width="150" alt="centered image" />
+# 
 # where n_perm is the number of permutations: in our case, 10000. The following model was fitted onto the first and second gradient scores of all 96 regions as delineated in the Harvard-Oxford atlas:
-# <img src="figures/formula_2.png" width="450">
+# 
+# <img class="marginauto" src="figures/formula_2.png" width="450" alt="centered image" />
+# 
 # where the variables within the square brackets are the nuisance variables which were corrected for.
 
 # 1. Preparing data frames:
@@ -703,7 +714,11 @@ for i in range(0,96):
     
 
 
-# ## Convert T-statistics to Cohen's d
+# 5. Convert T-statistics to Cohen's d
+
+# The results are reported only for the regions which survived the family-wise error rate (FWE) correction for multiple comparisons. We applied the following formula to compute effect size:
+# 
+# <img class="marginauto" src="figures/formula_3.png" width="200" alt="centered image" />
 
 # In[ ]:
 
@@ -767,9 +782,6 @@ for i in range(0,96):
     elif permuted_MED_NC_2[0][0][i] > 0.05:
         ols_perm_d_MED_NC_2[i] = None
 
-
-# The results are reported only for the regions which survived the family-wise error rate (FWE) correction for multiple comparisons. We applied the following formula to compute effect size:
-# <img src="figures/formula_3.png" width="1">
 
 # In[ ]:
 
