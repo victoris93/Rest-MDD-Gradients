@@ -554,7 +554,7 @@ ax.set_xlim([-4.5, 1]);
 
 # In the second gradient, the regions having the greatest spatial overlap with the DMN (above: the right angular gyrus and right paracingulate gyrus) were closer to zero in the drug-naïve group and, consequently, to the DMN which, as pointed out above, was attributed transitional values near zero. Conversely, in controls, these same regions were closer to the ventral attention network in terms of scores. The sign of the effect was reversed for the left middle temporal gyrus, temporooccipital part, which covers the junction of the DMN, frontoparietal and ventral attention networks: the region was situated farther away from zero along the second gradient in the drug-naïve group. This shift towards the negative end of the spectrum makes this region functionally closer to the networks obtaining similar scores in controls: the ventral attention and frontoparietal.
 
-# ## Disruption of the second Gradient within Ventral Attention Network in Patients on Medication
+# ## Disruption of the Second Gradient within Ventral Attention Network in Patients on Medication
 
 # In[61]:
 
