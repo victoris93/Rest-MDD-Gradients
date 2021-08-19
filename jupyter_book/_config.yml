@@ -1,7 +1,19 @@
 author: Victoria Shevchenko
 title: Biomarkers of Major Depressive Disorder. An Analysis of Macro-Scale Cortical Gradients
+logo: book_logo.png
+
 bibtex_bibfiles:
     - refs.bib
+    
 sphinx:
   config:
     bibtex_reference_style: author_year
+    
+repository:
+  url: https://github.com/victoris93/Rest-MDD-Gradients/tree/master/jupyter_book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master 
+  
+html:
+  use_issues_button: true
+  use_repository_button: true
