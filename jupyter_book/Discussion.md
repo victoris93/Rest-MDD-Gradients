@@ -43,6 +43,7 @@ The matter of effect size is also of great importance in the context of neuroima
 
 Our findings pave the way for further investigations based on the gradient approach since it has the potential of offering a holistic overview of alterations in macroscale functional cortical hierarchy in psychopathology. Ultimately, we posit that macroscale cortical gradients may be used to obtain much coveted answers to most fundamental questions in cognitive neuroscience: how are our brains different? How can this difference be explained in terms of developmental mechanisms and, more specifically, neurogenesis? How can we globally characterize biomarkers of psychopathology? Can one elaborate potential scenarios of emergence of psychopathological conditions based on neuroimaging data? These questions could benefit from holistic frameworks such as macroscale cortical gradients.
 
+# REFERENCES
 
 ```{bibliography}
 ```
